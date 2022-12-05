@@ -1,14 +1,30 @@
-//import Events from './Events'
-//import ClassComponent from './ClassComponent'
-//import DemoExample from './DemoExample'
+/*import Events from './Events'
+import ClassComponent from './ClassComponent'
+import DemoExample from './DemoExample'
 import StateExample from './StateExample'
-//import FuncProps from './Funcprops'
-//import JSX from './JSX'
-function App(){
-  return(
-    <section>
-    <StateExample/>
-     {/*<JSX/>
+import FuncProps from './Funcprops'
+import JSX from './JSX'*/
+import About from './components/About'
+import Contact from './components/Contact'
+import Home from './components/Home'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Navbar from './components/Navbar'
+import NotFound from './components/NotFound'
+  function App(){
+    return(
+      <div>
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+          <Route path="*" element={<NotFound/>}/>
+    </Routes>
+    </BrowserRouter>
+
+    {/*<StateExample/>
+     <JSX/>
    <Events/>
       <DemoExample price="1st price"/>
       
@@ -20,7 +36,7 @@ function App(){
       <h1>heading tag</h1>
       <img src="https://thumbs.dreamstime.com/b/aster-flowers-art-design-26968847.jpg" alt="msg"/>    
       <ClassComponent/>*/}
-       </section>
+        </div>     
   )
 }
 export default App

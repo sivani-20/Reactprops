@@ -35,4 +35,15 @@
   to {
     transform: rotate(360deg);
   }
+
 }
+
+.nav {
+  text-align: center;
+  font-family: cursive;
+  border-style: dotted;
+  text-decoration: none;
+  background-color: yellow;
+  word-spacing: 40px;
+}
+
